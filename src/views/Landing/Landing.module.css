@@ -1,0 +1,40 @@
+.swiperContainerParent {
+  min-height: 100vh;
+  position: relative;
+}
+.swiperSlideLink {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  color: #000;
+  text-decoration: none;
+  line-height: 1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.swiperSlideLink:hover,
+.swiperSlideLink:active {
+  color: #000;
+}
+
+.paginationContainer {
+  z-index: 10;
+  position: absolute !important;
+  bottom: 45px !important;
+  left: 50% !important;
+  transform: translateX(-50%);
+  width: auto !important;
+  /* background: #fff; */
+  display: flex;
+}
+:global(div.swiper-pagination-home .swiper-pagination-bullet) {
+  width: 15px;
+  height: 15px;
+  background: #fffdfd;
+  opacity: 0.6;
+}
+:global(.swiper-pagination-bullet-active) {
+  background: #e7a600 !important;
+  opacity: 1 !important;
+}

@@ -1,0 +1,73 @@
+.restaurantCard {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+.restaurantCard:hover .cover {
+  transform: scale(1.2);
+}
+.header {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.cover {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.logo {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  padding: 3.5px;
+  border-radius: 100%;
+  z-index: 5;
+  bottom: 20px;
+  left: 20px;
+  overflow: hidden;
+}
+.logo img {
+  border-radius: 50%;
+}
+.body {
+  padding: 20px 20px 0;
+}
+.title {
+  color: #000;
+  font-weight: 600;
+  font-size: 21px;
+  margin-bottom: 5px;
+}
+.description {
+  color: #666;
+  font-size: 14px;
+}
+.footer {
+  padding: 20px;
+}
+.profileLink {
+  display: block;
+  text-align: center;
+  color: #3498db;
+  border: 1px solid #3498db;
+  padding: 9px 21px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 1px;
+  border-radius: 6px;
+}
+.profileLink:hover {
+  color: #fff;
+  background: #3498db;
+}
+.profileLink:active {
+  color: #fff;
+  background: #228dd5;
+}

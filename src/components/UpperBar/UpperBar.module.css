@@ -1,0 +1,33 @@
+.upperBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ncBtn {
+  width: 51px;
+  height: 51px;
+  background: #f5f7fa;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 18px;
+}
+.ncIcon:before {
+  font-size: 22px;
+  font-weight: 500;
+}
+.ncBtn:hover {
+  background: #eee;
+}
+.avatar {
+  width: 51px;
+  height: 51px;
+}
+.avatar img {
+  border-radius: 50%;
+}
+.toolsBar {
+  display: flex;
+  align-items: center;
+}
