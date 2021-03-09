@@ -12,8 +12,8 @@ const Footer = () => {
           <div className={`container`}>
             <div className={`row`}>
               <div className={`col-lg-4`}>
-                <div className={`bg-title mb-3 white`}>Logo Here</div>
-                <div className={`text gray`}>
+                <div className={`bg-title mb-3`}>Logo Here</div>
+                <div className={`text gray ${classes.footerText}`}>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -24,19 +24,13 @@ const Footer = () => {
               <div className={`col-lg-3`}>
                 <div className={classes.footerLinks}>
                   <div className={classes.footerLink}>
-                    <Link>Page Link 1</Link>
+                    <Link>Menu</Link>
                   </div>
                   <div className={classes.footerLink}>
-                    <Link>Page Link 2</Link>
+                    <Link>Contact</Link>
                   </div>
                   <div className={classes.footerLink}>
-                    <Link>Page Link 3</Link>
-                  </div>
-                  <div className={classes.footerLink}>
-                    <Link>Page Link 4</Link>
-                  </div>
-                  <div className={classes.footerLink}>
-                    <Link>Page Link 5</Link>
+                    <Link>About Us</Link>
                   </div>
                 </div>
               </div>
@@ -59,6 +53,10 @@ const Footer = () => {
                     <Link>Page Link 5</Link>
                   </div>
                 </div>
+              </div>
+
+              <div className={`col-lg-2`}>
+                <div className={classes.socialmedia}></div>
               </div>
             </div>
           </div>

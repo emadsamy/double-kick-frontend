@@ -1,15 +1,16 @@
 .footer {
-  background: #333;
+  background-image: linear-gradient(to top, #fffaf3, #fffdfb);
 }
 .footerTop {
   padding: 50px 0;
 }
 .footerBottom {
-  padding: 23px 0;
+  padding: 20px 0;
   text-align: center;
-  color: #fff;
+  color: #3a3a39;
   font-size: 18px;
-  background: #5555;
+  /* background: #5555; */
+  border-top: 1px solid #ffe1b8;
 }
 .footerLinks {
   padding-top: 30px;
@@ -20,7 +21,11 @@
 }
 .footerLink a {
   color: #ccc;
+  color: #3a3a39;
 }
 .footerLink a:hover {
-  color: #fff;
+  color: #000;
+}
+.footerText {
+  color: #3a3a39;
 }

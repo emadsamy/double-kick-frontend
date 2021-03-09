@@ -1,0 +1,59 @@
+.slideMeal {
+  display: block;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  /* margin-bottom: 15px; */
+  position: relative;
+}
+.mealImgView {
+  height: 180px !important;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+.mealBody {
+  padding: 25px 20px;
+  /* border: 1px solid #ccc; */
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+}
+.mealTitle {
+  font-size: 19px;
+  color: #000;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+.mealPrice {
+  line-height: 1;
+  font-size: 16px;
+  color: #666;
+}
+.mealPrice span {
+  color: #000;
+}
+.toggleFavBtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #fff;
+  line-height: 1;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.toggleFavDiv {
+  display: flex;
+  align-items: center;
+}
+.toggleFavBtn .icon {
+  font-size: 17px;
+  font-weight: 600;
+  color: #fff;
+}
+.toggleFavBtnText {
+  display: block;
+  line-height: 1;
+  font-size: 14px;
+  margin-left: 8px;
+  margin-top: -3px;
+}

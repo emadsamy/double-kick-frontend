@@ -323,7 +323,6 @@ input[type="password"]::placeholder {
 .button-pri:active {
   opacity: 0.7;
 }
-
 .btn:focus {
   border: none !important;
   box-shadow: none !important;
@@ -331,43 +330,32 @@ input[type="password"]::placeholder {
   line-height: 1 !important;
   font-size: 1rem !important;
 }
+.main-button {
+  display: inline-block;
+  background: #ff9401;
+  color: #fff;
+  font-weight: 600;
 
-/* Animations */
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-  }
-  40% {
-    -webkit-transform: translate(-50%, -16px);
-    -ms-transform: translateY(-50%, -16px);
-    transform: translateY(-50%, -16px);
-  }
-  60% {
-    -webkit-transform: translate(-50%, -8px);
-    -ms-transform: translateY(-50%, -8px);
-    transform: translateY(-50%, -8px);
-  }
-}
-.bounce {
-  transform: translateX(-50%);
-  animation: bounce 2s infinite 1s;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  position: absolute;
-  bottom: 25px;
-  left: 50%;
-}
+  font-size: 15px;
 
-/* Animations */
+  padding: 12px 27px;
+  line-height: 1;
+  border-radius: 50px;
+  letter-spacing: 0px;
+  box-shadow: 4px 4px 6px rgba(255, 148, 1, 0.7);
+}
+.main-button:hover {
+  background: #f18d03;
+  color: #fff !important;
+  box-shadow: none;
+}
+.main-button:active {
+  opacity: 0.6;
+  color: #fff !important;
+}
+.main-button:focus {
+  color: #fff !important;
+}
 
 /* Dropdown */
 button.dropdown-toggle {

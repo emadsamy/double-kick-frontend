@@ -17,7 +17,6 @@
 .swiperSlideLink:active {
   color: #000;
 }
-
 .paginationContainer {
   z-index: 10;
   position: absolute !important;
@@ -25,7 +24,6 @@
   left: 50% !important;
   transform: translateX(-50%);
   width: auto !important;
-  /* background: #fff; */
   display: flex;
 }
 :global(div.swiper-pagination-home .swiper-pagination-bullet) {
@@ -35,6 +33,78 @@
   opacity: 0.6;
 }
 :global(.swiper-pagination-bullet-active) {
-  background: #e7a600 !important;
+  background: #f3b427 !important;
   opacity: 1 !important;
+}
+.HomeSliderSandwich {
+  padding: 90px 0;
+}
+.moreMeals {
+  text-align: center;
+  margin-top: 30px;
+}
+.HomeSliderSandwich :global(.swiper-container) {
+  padding-bottom: 20px;
+}
+.homeAbout {
+  background: #fff;
+  padding: 80px 0;
+}
+.aboutContent {
+  display: flex;
+}
+.aboutContent > div {
+  width: 50%;
+}
+.aboutView {
+  padding-right: 50px;
+}
+.aboutView img {
+  border-radius: 12px;
+  max-height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+.aboutBgTitle {
+  line-height: 1.2;
+  font-size: 31px;
+  margin-bottom: 15px;
+}
+.aboutText {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 22px;
+}
+.aboutInfo {
+  padding-top: 30px;
+}
+.benefitsContainer {
+  padding: 100px;
+}
+.benefitsTitle {
+  color: #363636;
+  font-size: 31px;
+  margin-bottom: 40px;
+}
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 12.52rem;
+  gap: 30px;
+  text-align: center;
+}
+.benefitCardFlag {
+  margin-bottom: 10px;
+}
+.benefitCardTitle {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 7px;
+}
+.benefitCardText {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #666;
 }
