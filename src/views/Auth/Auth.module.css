@@ -8,21 +8,29 @@
   margin: auto;
   min-height: 100vh;
   display: flex;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .content > div {
-  width: 50%;
+  width: 100%;
 }
 .authForm {
-  padding: 100px 70px;
+  padding: 75px 70px;
   display: flex;
   place-items: center;
   overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .data {
   margin-left: auto;
   margin-right: auto;
-  width: 440px;
+  width: 500px;
   max-width: 100%;
+  background: #fff;
+  padding: 60px 70px;
+  border-radius: 14px;
 }
 .logo {
   font-size: 19px;
@@ -31,7 +39,8 @@
   margin-bottom: 40px;
 }
 .bgTitle {
-  margin-bottom: 3px;
+  margin-bottom: 10px;
+  line-height: 1;
 }
 .text {
   font-size: 17px;
@@ -42,6 +51,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  display: none;
 }
 .toggleAuthLinks {
   font-weight: 500;
@@ -80,4 +90,16 @@
   font-size: 16px;
   display: block;
   cursor: pointer;
+}
+.toggleAuthBtn,
+.toggleAuthBtn:focus {
+  color: #ff9401;
+}
+.toggleAuthBtn:hover {
+  color: #ff9401;
+  opacity: 0.7;
+}
+.toggleAuthBtn:active {
+  color: #ff9401;
+  opacity: 0.4;
 }

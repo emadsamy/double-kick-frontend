@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import classes from "./Footer.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { coffee } from "@fortawesome/free-solid-svg-icons";
+// import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
@@ -56,7 +57,13 @@ const Footer = () => {
               </div>
 
               <div className={`col-lg-2`}>
-                <div className={classes.socialmedia}></div>
+                <div className={classes.socialmedia}>
+                  <FontAwesomeIcon icon={["fal", "coffee"]} />
+                  <FontAwesomeIcon icon={["far", "coffee"]} />
+                  <FontAwesomeIcon icon={["fas", "coffee"]} />
+                  <FontAwesomeIcon icon="coffee" />
+                  <FontAwesomeIcon icon={["fab", "github"]} />
+                </div>
               </div>
             </div>
           </div>

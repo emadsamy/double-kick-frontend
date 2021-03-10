@@ -15,7 +15,6 @@
   width: 100%;
   background: #fff;
   z-index: 100;
-  display: none;
 }
 .navbar {
   display: flex;
@@ -24,6 +23,9 @@
 }
 .navLinks a {
   color: #000;
+  line-height: 1;
+  display: inline-block;
+  font-size: 18px;
 }
 .navLinks {
   display: flex;
@@ -31,6 +33,7 @@
 .navDropdown {
   position: relative;
   margin-left: 25px;
+  line-height: 1;
 }
 .navDropdown:hover .navDropdownList {
   display: block;
@@ -77,4 +80,8 @@
 }
 .arrowDown {
   margin-left: 6px;
+}
+.navIcon span {
+  font-weight: bold;
+  font-size: 19px;
 }

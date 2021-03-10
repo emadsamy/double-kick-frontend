@@ -34,13 +34,13 @@ const Navbar = () => {
             </div> */}
             <div className={classes.navDropdown}>
               <NavLink to="/home" className={classes.navLink}>
-                Places
-                <FontAwesomeIcon
+                Menu
+                {/* <FontAwesomeIcon
                   className={classes.arrowDown}
                   icon={faAngleDown}
-                />
+                /> */}
               </NavLink>
-              <div className={classes.navDropdownList}>
+              {/* <div className={classes.navDropdownList}>
                 {navs.map((nav, index) => {
                   return (
                     <NavLink
@@ -52,7 +52,7 @@ const Navbar = () => {
                     </NavLink>
                   );
                 })}
-              </div>
+              </div> */}
             </div>
             <div className={classes.navDropdown}>
               <NavLink to="/" className={classes.navLink}>
@@ -65,9 +65,17 @@ const Navbar = () => {
               </NavLink>
             </div>
             <div className={classes.navDropdown}>
-              <NavLink to="/login" className={classes.navLink}>
+              <NavLink
+                to="/login"
+                className={`${classes.navLink} ${classes.navAuth}`}
+              >
                 Login
               </NavLink>
+            </div>
+            <div className={classes.navDropdown}>
+              <button to="/login" className={`${classes.navIcon}`}>
+                <span className={`icon-search`}></span>
+              </button>
             </div>
           </div>
         </div>

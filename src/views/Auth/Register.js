@@ -5,7 +5,12 @@ import classes from "./Auth.module.css";
 const Register = () => {
   return (
     <div className={classes.authContainer}>
-      <div className={classes.content}>
+      <div
+        className={classes.content}
+        style={{
+          backgroundImage: `url(${"https://images.unsplash.com/photo-1551224160-324dd747bfb1"})`,
+        }}
+      >
         <div className={classes.authForm}>
           <div className={classes.data}>
             {/* <div className={classes.logo}>Logo Here</div> */}
@@ -16,7 +21,7 @@ const Register = () => {
             </div>
 
             <form className={classes.form}>
-              <div className={classes.toggleUsers}>
+              {/* <div className={classes.toggleUsers}>
                 <div className={classes.memberType}>
                   <input
                     type="radio"
@@ -35,24 +40,31 @@ const Register = () => {
                   />
                   <label>Publisher</label>
                 </div>
-              </div>
+              </div> */}
               <div className={`form-data-group`}>
                 <label className={`form-data-label`}>Name</label>
                 <div className={`form-data-input`}>
                   <input type="text" placeholder={`Full Name`} />
                 </div>
               </div>
-              <div className={`form-data-group`}>
+              {/* <div className={`form-data-group`}>
                 <label className={`form-data-label`}>Your Email</label>
                 <div className={`form-data-input`}>
                   <input type="email" placeholder={`name@domain.com`} />
                 </div>
-              </div>
+              </div> */}
 
-              <div className={`form-data-group mb-3`}>
+              {/* <div className={`form-data-group mb-3`}>
                 <label className={`form-data-label`}>Website</label>
                 <div className={`form-data-input`}>
                   <input type="text" placeholder={`www.example.com`} />
+                </div>
+              </div> */}
+
+              <div className={`form-data-group mb-3`}>
+                <label className={`form-data-label`}>Number Phone</label>
+                <div className={`form-data-input`}>
+                  <input type="tel" placeholder={`01234567890`} />
                 </div>
               </div>
 
@@ -61,7 +73,7 @@ const Register = () => {
                 <div className={`form-data-input`}>
                   <input
                     type="password"
-                    placeholder={`at least 8 characters`}
+                    placeholder={`at least 6 characters`}
                   />
                 </div>
               </div>
@@ -73,11 +85,14 @@ const Register = () => {
                 </div>
               </div>
 
-              <div className={`form-data-group mb-1`}>
-                <button className={`button-pri`}>Register Now</button>
+              <div className={`form-data-group mb-3`}>
+                <button className={`main-button`}>Register Now</button>
               </div>
               <div className={classes.toggleAuthLinks}>
-                Already have an account ? <Link to="/login">Login Now</Link>
+                Already have an account ?
+                <Link className={classes.toggleAuthBtn} to="/login">
+                  Login Now
+                </Link>
               </div>
             </form>
           </div>

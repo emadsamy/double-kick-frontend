@@ -5,7 +5,12 @@ import classes from "./Auth.module.css";
 const Login = () => {
   return (
     <div className={classes.authContainer}>
-      <div className={classes.content}>
+      <div
+        className={classes.content}
+        style={{
+          backgroundImage: `url(${"https://images.unsplash.com/photo-1551224160-324dd747bfb1"})`,
+        }}
+      >
         <div className={classes.authForm}>
           <div className={classes.data}>
             {/* <div className={classes.logo}>Logo Here</div> */}
@@ -15,10 +20,10 @@ const Login = () => {
               registration
             </div>
             <form className={classes.form}>
-              <div className={`form-data-group`}>
-                <label className={`form-data-label`}>Your Email</label>
+              <div className={`form-data-group mb-3`}>
+                <label className={`form-data-label`}>Number Phone</label>
                 <div className={`form-data-input`}>
-                  <input type="email" placeholder={`name@domain.com`} />
+                  <input type="tel" placeholder={`01234567890`} />
                 </div>
               </div>
               <div className={`form-data-group mb-3`}>
@@ -26,7 +31,7 @@ const Login = () => {
                 <div className={`form-data-input`}>
                   <input
                     type="password"
-                    placeholder={`at least 8 characters`}
+                    placeholder={`at least 6 characters`}
                   />
                 </div>
               </div>
@@ -45,11 +50,14 @@ const Login = () => {
                 </div>
               </div>
 
-              <div className={`form-data-group mb-1`}>
-                <button className={`button-pri`}>Login</button>
+              <div className={`form-data-group mb-3`}>
+                <button className={`main-button`}>Login</button>
               </div>
               <div className={classes.toggleAuthLinks}>
-                Don't have an account ? <Link to="/register">Register Now</Link>
+                Don't have an account ?
+                <Link className={classes.toggleAuthBtn} to="/register">
+                  Register Now
+                </Link>
               </div>
             </form>
           </div>

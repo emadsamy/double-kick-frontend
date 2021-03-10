@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import { Landing, Login, Register, Home } from "./views";
 import "bootstrap/dist/css/bootstrap.min.css";

@@ -113,13 +113,13 @@ const Sandwich = () => {
             {t("see-more-btn")}
           </NavLink>
           {/* {t("welcome")} */}
-          <br />
+          {/* <br />
           {i18n.language == "ar" ? (
             <button onClick={() => changeLanguage("en")}>EN</button>
           ) : (
             <button onClick={() => changeLanguage("ar")}>AR</button>
           )}
-          <br />
+          <br /> */}
           {/* {i18n.language == "ar" ? "عماد" : "emad"} */}
         </div>
       </div>
