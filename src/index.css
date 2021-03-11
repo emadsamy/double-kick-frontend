@@ -385,3 +385,6 @@ a.dropdown-item:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 /* Dropdown */
+.wrapper-container {
+  padding-top: 95.5px;
+}

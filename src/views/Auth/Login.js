@@ -2,10 +2,17 @@ import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import classes from "./Auth.module.css";
 import { AuthHeader } from "./AuthHeader";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   return (
     <div className={classes.authContainer}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Login</title>
+        <link rel="canonical" href="http://double-kick.com/login" />
+        {/* <body className="dynamic-class-for-body-on-this-view" /> */}
+      </Helmet>
       <div
         className={classes.content}
         style={{
