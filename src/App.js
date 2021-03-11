@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import { Landing, Login, Register, Home } from "./views";
+import { ScrollToTop } from "./components";
 import "bootstrap/dist/css/bootstrap.min.css";
 import classes from "./App.module.css";
 
 function App() {
   return (
     <div className={classes.wrapper}>
+      <ScrollToTop />
       <Switch>
         <Route exact path="/">
           <Landing />

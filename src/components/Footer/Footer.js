@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import classes from "./Footer.module.css";
+import logo from "../../assets/img/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { coffee } from "@fortawesome/free-solid-svg-icons";
 // import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
@@ -13,7 +14,12 @@ const Footer = () => {
           <div className={`container`}>
             <div className={`row`}>
               <div className={`col-lg-4`}>
-                <div className={`bg-title mb-3`}>Logo Here</div>
+                <div className={`bg-title mb-3`}>
+                  <img
+                    src={logo}
+                    className={`img-fluid ${classes.footLogoView}`}
+                  />
+                </div>
                 <div className={`text gray ${classes.footerText}`}>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's

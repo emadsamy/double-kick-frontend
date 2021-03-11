@@ -1,12 +1,12 @@
 .searchContainer {
   background: #f5f7fa;
-  /* padding: 12px 18px; */
-  border-radius: 16px;
+  border-radius: 50px;
   display: flex;
   align-items: center;
   padding-right: 18px;
   width: 600px;
   max-width: 100%;
+  position: relative;
 }
 .icon {
   font-weight: 600;
@@ -23,4 +23,13 @@
   font-weight: 400;
   display: block;
   width: 100%;
+}
+.searchDropdownOuter {
+  background: #fff;
+  border: 1px solid #000;
+  width: 100%;
+  position: absolute;
+  top: 102%;
+  z-index: 10;
+  padding: 10px;
 }

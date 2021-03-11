@@ -28,6 +28,8 @@
   margin-right: auto;
   width: 500px;
   max-width: 100%;
+}
+.authDataBg {
   background: #fff;
   padding: 60px 70px;
   border-radius: 14px;
@@ -102,4 +104,10 @@
 .toggleAuthBtn:active {
   color: #ff9401;
   opacity: 0.4;
+}
+.authLogo {
+  margin-bottom: 20px;
+}
+.authLogo img {
+  width: 360px;
 }

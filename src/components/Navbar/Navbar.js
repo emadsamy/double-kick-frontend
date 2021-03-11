@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import classes from "./Navbar.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import logo from "../../assets/img/logo.svg";
+import { Search } from "../";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
+  const [toggleSearch, setToggleSearch] = useState(false);
   const [navs, setNavs] = useState([
     {
       id: 1,
@@ -21,10 +24,11 @@ const Navbar = () => {
   ]);
   return (
     <nav id="mainNavbar" className={classes.nav}>
+      {toggleSearch ? <Search className={classes.searchContainerNav} /> : ""}
       <div className={`container`}>
         <div className={classes.navbar}>
           <NavLink to="/" className={classes.navLogo}>
-            Logo Here
+            <img src={logo} className={`img-fluid ${classes.navLogoView}`} />
           </NavLink>
           <div className={classes.navLinks}>
             {/* <div className={classes.navDropdown}>
@@ -33,8 +37,8 @@ const Navbar = () => {
               </NavLink>
             </div> */}
             <div className={classes.navDropdown}>
-              <NavLink to="/home" className={classes.navLink}>
-                Menu
+              <NavLink to="/" className={classes.navLink}>
+                Home
                 {/* <FontAwesomeIcon
                   className={classes.arrowDown}
                   icon={faAngleDown}
@@ -55,12 +59,17 @@ const Navbar = () => {
               </div> */}
             </div>
             <div className={classes.navDropdown}>
-              <NavLink to="/" className={classes.navLink}>
+              <NavLink to="/menu" className={classes.navLink}>
+                Menu
+              </NavLink>
+            </div>
+            <div className={classes.navDropdown}>
+              <NavLink to="/about" className={classes.navLink}>
                 About
               </NavLink>
             </div>
             <div className={classes.navDropdown}>
-              <NavLink to="/" className={classes.navLink}>
+              <NavLink to="/contact" className={classes.navLink}>
                 Contact Us
               </NavLink>
             </div>
@@ -73,8 +82,15 @@ const Navbar = () => {
               </NavLink>
             </div>
             <div className={classes.navDropdown}>
-              <button to="/login" className={`${classes.navIcon}`}>
-                <span className={`icon-search`}></span>
+              <button
+                onClick={() => setToggleSearch(!toggleSearch)}
+                className={`${classes.navIcon}`}
+              >
+                {toggleSearch ? (
+                  <span className={`icon-cancel`}></span>
+                ) : (
+                  <span className={`icon-search`}></span>
+                )}
               </button>
             </div>
           </div>

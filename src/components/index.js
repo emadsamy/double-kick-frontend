@@ -6,5 +6,16 @@ import { Search } from "./Search/Search";
 import { UpperBar } from "./UpperBar/UpperBar";
 import { Avatar } from "./Avatar/Avatar";
 import { Loader } from "./Loader/Loader";
+import { ScrollToTop } from "./ScrollToTop/ScrollToTop";
 
-export { Navbar, Footer, MealItem, Sidebar, Search, UpperBar, Avatar, Loader };
+export {
+  Navbar,
+  Footer,
+  MealItem,
+  Sidebar,
+  Search,
+  UpperBar,
+  Avatar,
+  Loader,
+  ScrollToTop,
+};
