@@ -1,0 +1,55 @@
+.viewProduct {
+  padding: 30px 70px;
+}
+.viewProductContent {
+  display: flex;
+}
+.viewProductContent > div {
+  width: 50%;
+}
+.mainView {
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+.mainView img {
+  height: 400px;
+  object-fit: contain;
+}
+.arrows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 15px 0;
+}
+.arrows button {
+  margin: 0 10px;
+  width: 35px;
+  height: 35px;
+  background: #ff940120;
+  border: 2px solid #ff9401;
+  color: #ff9401;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.iconChevron {
+  font-weight: bold;
+  font-size: 14px;
+}
+.arrows button:hover {
+  background: #ff9401;
+  color: #fff;
+}
+.arrows button:active {
+  opacity: 0.7;
+}
+.toggleImgSlide {
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+}

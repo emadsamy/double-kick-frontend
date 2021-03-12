@@ -11,7 +11,7 @@ const Register = () => {
         <meta charSet="utf-8" />
         <title>Register</title>
         <link rel="canonical" href="http://double-kick.com/login" />
-        {/* <body className="dynamic-class-for-body-on-this-view" /> */}
+        <body className="dynamic-class-for-body-on-this-view" />
       </Helmet>
       <div
         className={classes.content}

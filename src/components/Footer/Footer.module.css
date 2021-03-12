@@ -1,5 +1,6 @@
 .footer {
-  background-image: linear-gradient(to top, #fffaf3, #fffdfb);
+  /* background-image: linear-gradient(to top, #fffaf3, #fffdfb); */
+  background: #fff;
 }
 .footerTop {
   padding: 50px 0;
@@ -8,9 +9,8 @@
   padding: 20px 0;
   text-align: center;
   color: #3a3a39;
-  font-size: 18px;
-  /* background: #5555; */
-  border-top: 1px solid #ffe1b8;
+  font-size: 16px;
+  border-top: 1px solid #f4f4f4;
 }
 .footerLinks {
   padding-top: 30px;

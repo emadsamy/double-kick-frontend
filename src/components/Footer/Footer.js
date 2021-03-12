@@ -64,11 +64,11 @@ const Footer = () => {
 
               <div className={`col-lg-2`}>
                 <div className={classes.socialmedia}>
-                  <FontAwesomeIcon icon={["fal", "coffee"]} />
+                  {/* <FontAwesomeIcon icon={["fal", "coffee"]} />
                   <FontAwesomeIcon icon={["far", "coffee"]} />
                   <FontAwesomeIcon icon={["fas", "coffee"]} />
                   <FontAwesomeIcon icon="coffee" />
-                  <FontAwesomeIcon icon={["fab", "github"]} />
+                  <FontAwesomeIcon icon={["fab", "github"]} /> */}
                 </div>
               </div>
             </div>

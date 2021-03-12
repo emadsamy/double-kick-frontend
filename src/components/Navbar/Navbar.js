@@ -82,6 +82,11 @@ const Navbar = () => {
               </NavLink>
             </div>
             <div className={classes.navDropdown}>
+              <button className={`${classes.navIcon}`}>
+                <span className={`icon-cart`}></span>
+              </button>
+            </div>
+            <div className={classes.navDropdown}>
               <button
                 onClick={() => setToggleSearch(!toggleSearch)}
                 className={`${classes.navIcon}`}

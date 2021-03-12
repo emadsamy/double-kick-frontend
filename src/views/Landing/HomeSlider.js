@@ -38,6 +38,8 @@ const HomeSlider = () => {
       <Swiper
         spaceBetween={10}
         slidesPerView={1}
+        observer={true}
+        observeParents={true}
         speed={1000}
         pagination={{ el: ".swiper-pagination-home", clickable: true }}
         autoplay={{ delay: 4500 }}

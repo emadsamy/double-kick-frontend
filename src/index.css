@@ -342,7 +342,7 @@ input[type="password"]::placeholder {
   line-height: 1;
   border-radius: 50px;
   letter-spacing: 0px;
-  box-shadow: 4px 4px 6px rgba(255, 148, 1, 0.7);
+  /* box-shadow: 4px 4px 6px rgba(255, 148, 1, 0.7); */
 }
 .main-button:hover {
   background: #f18d03;

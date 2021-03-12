@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
-import { Landing, Login, Register, Home } from "./views";
+import { Landing, Login, Register, Home, Menu, ViewProduct } from "./views";
 import { ScrollToTop } from "./components";
 import "bootstrap/dist/css/bootstrap.min.css";
 import classes from "./App.module.css";
@@ -22,6 +22,13 @@ function App() {
         <Route path="/home">
           <Home />
         </Route>
+        <Route path="/menu">
+          <Menu />
+        </Route>
+        <Route
+          path="/product/:id"
+          render={(props) => <ViewProduct {...props} />}
+        ></Route>
         {/* <Route component={NotFound}></Route> */}
       </Switch>
     </div>

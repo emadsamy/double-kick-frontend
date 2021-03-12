@@ -1,0 +1,50 @@
+.header {
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+.headerContent {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 1px 2px rgb(0 0 0 / 10%);
+}
+.headerContent > div {
+  width: 50%;
+}
+.headerData {
+  padding: 50px 50px 50px 50px;
+}
+.headerTitle {
+  font-size: 55px;
+  font-weight: bold;
+  line-height: 1;
+}
+.headerSub {
+  color: #fdb714;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.headerDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.menuTitle {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 12.52rem;
+  gap: 27px;
+  margin-bottom: 70px;
+}
+.mealItem {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+}

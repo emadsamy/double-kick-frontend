@@ -1,38 +1,34 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink, Link } from "react-router-dom";
+import classes from "./Menu.module.css";
+import { Helmet } from "react-helmet";
+import { Navbar } from "../../components";
+import { Footer } from "../../components";
 import { MealItem } from "../../components";
-import classes from "./Landing.module.css";
-import SwiperCore, {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
-const Sandwich = () => {
+const Menu = () => {
   const { t, i18n } = useTranslation();
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
-    const bodyEl = document.body;
-    if (language == "ar") {
-      bodyEl.classList.add("body-rtl");
-    } else {
-      bodyEl.classList.remove("body-rtl");
-    }
-  };
-  if (localStorage.getItem("i18nextLng")) {
-    const bodyEl = document.body;
-    if (localStorage.getItem("i18nextLng") == "ar") {
-      bodyEl.classList.add("body-rtl");
-    } else {
-      bodyEl.classList.remove("body-rtl");
-    }
-  }
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [prices, setPrices] = useState([
+    // 72
+    {
+      id: 1,
+      price: 15,
+    },
+    {
+      id: 2,
+      price: 23,
+    },
+    {
+      id: 3,
+      price: 34,
+    },
+    {
+      id: 4,
+      price: 9,
+    },
+  ]);
   const [rows, setRows] = useState([
     {
       id: 1,
@@ -95,53 +91,91 @@ const Sandwich = () => {
         " to customers. ... restaurant guide that has reviews on the restaurants as experienced by the public and provides information on locations and contact",
     },
   ]);
+  const handlerCounter = () => {
+    var totally = 0;
+    prices.map((item, index) => {
+      totally += item.price;
+      setTotalPrice(totally);
+    });
+    console.log("Total Price Is: " + totalPrice);
+  };
+
+  useEffect(() => {
+    handlerCounter();
+  });
+
+  const pushObjectHandler = (idx, pricex) => {
+    prices.push({ id: idx, price: pricex });
+    handlerCounter();
+  };
+
   return (
-    <div className={classes.HomeSliderSandwich}>
-      <div className={`container`}>
-        <Swiper
-          spaceBetween={27}
-          slidesPerView={4}
-          speed={1000}
-          pagination={false}
-          autoplay={{ delay: 4500 }}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-          className={classes.swiperContainerSandwich}
-        >
-          {rows.map((row, index) => {
-            return (
-              <SwiperSlide key={index}>
+    <div className={`wrapper-container ${classes.wrapperContainer}`}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Menu</title>
+        <body className="dynamic-class-for-body-on-this-view" />
+      </Helmet>
+      <Navbar />
+      <div className={classes.header}>
+        <div className={`container`}>
+          <div className={classes.headerContent}>
+            <div className={classes.headerData}>
+              <div>
+                <div className={classes.headerTitle}>Chicken Wings</div>
+                <div className={classes.headerSub}>
+                  special food for this week
+                </div>
+                <div className={classes.headerDescription}>
+                  is simply dummy text of the printing and typesetting industry.
+                  Lorem Ipsum has been the industry's standard dummy text ever
+                  since the 1500s, when an unknown printer took a galley of type
+                  and scrambled it to make a type specimen book
+                </div>
+                <button
+                  className={`main-button ${classes.moreMealsLink}`}
+                  onClick={() => pushObjectHandler(5, 10)}
+                >
+                  Buy Now
+                </button>
+              </div>
+            </div>
+            <div className={classes.headerView}>
+              <img
+                src={
+                  "https://image.freepik.com/free-photo/fried-chicken-wings-with-french-fries-tomato_74190-6311.jpg"
+                }
+                className={`img-fluid`}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={classes.menuContainer}>
+        <div className={`container`}>
+          <div className={classes.menuTitle}>
+            Discover Best Dishes,
+            <br /> Meals, Sandwich...
+          </div>
+          <div className={classes.menuGrid}>
+            {rows.map((row, index) => {
+              return (
                 <MealItem
+                  key={index}
+                  className={classes.mealItem}
                   image={row.image}
-                  title={row.title}
-                  title_ar={row.title_ar}
+                  title={i18n.language == "ar" ? row.title_ar : row.title}
                   price={row.price}
                   description={row.description}
                 />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-        <div className={classes.moreMeals}>
-          <NavLink
-            className={`main-button ${classes.moreMealsLink}`}
-            to={"/menu"}
-          >
-            {t("see-more-btn")}
-          </NavLink>
-          {/* {t("welcome")} */}
-          {/* <br />
-          {i18n.language == "ar" ? (
-            <button onClick={() => changeLanguage("en")}>EN</button>
-          ) : (
-            <button onClick={() => changeLanguage("ar")}>AR</button>
-          )}
-          <br />
-          {i18n.language == "ar" ? "عماد" : "emad"} */}
+              );
+            })}
+          </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
 
-export { Sandwich };
+export { Menu };
